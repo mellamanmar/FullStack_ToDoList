@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="card">
+    <div class="card-header">Add task
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="newToDo.task" name="task" class="form-control" placeholder="Task here" required autofocus>
+            <input type="text" [(ngModel)]="newToDo.task_responsable" name="task_responsable" class="form-control" placeholder="Add a responsable">
+            <input type="date" [(ngModel)]="newToDo.deadline" name="deadline" class="form-control" placeholder="Define deadline">
+            <input type="text" [(ngModel)]="newToDo.status" name="status" class="form-control" placeholder="Task status">
+            <textarea type="textarea" [(ngModel)]="newToDo.update" name="update" class="form-control" placeholder="Update the task"></textarea>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
