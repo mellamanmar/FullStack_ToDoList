@@ -11,6 +11,7 @@
 export class TaskComponent implements OnInit {
 
   toDo: any [] = []
+  newToDo: any [] = []
 
   constructor(private taskService : TaskService) {  }
 
@@ -20,17 +21,16 @@ export class TaskComponent implements OnInit {
 
   getTasks() {
     this.taskService.getTasks()
-    .subscribe(toDo => {
+    .subscribe(toDo => {this.toDo = toDo
       console.log (this.toDo)
-      this.toDo = toDo
     })
 
   }
 
-  // addTask(newToDo:ToDo): void {
-  //   this.taskService.addTask(newToDo)
-  //   .subscribe(newToDo => this.newToDo = newToDo)
-  //   }
+  addTask() {
+    this.taskService.addTask(this.newToDo)
+    .subscribe( (data) => {this.newToDo = data})
+  }
 
 
 }

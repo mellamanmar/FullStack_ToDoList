@@ -11,12 +11,12 @@ export class TaskService {
   private domain = 'http://localhost:3000/todo'
   constructor(private http : HttpClient) { }
 
-  addTask(newToDo: any) {
-    return this.http.post(this.domain + '/create', newToDo)
-  }
-
   public getTasks(): Observable<any> {
     return this.http.get<any>(this.domain + '/')
+  }
+
+  addTask(newToDo: any): Observable<any> {
+    return this.http.post<any>(this.domain + '/create', newToDo)
   }
 
   // deleteTask(id: any) {
