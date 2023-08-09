@@ -3,12 +3,12 @@
 
 ### Autor: Marianny Márquez
 ### Prográmate Academy
-<img src='image/todo-list.png' alt='Logo Prográmate' width="180" height="70">
+<img src='image/programate.png' alt='Logo Prográmate' width="180" height="70">
 
 ## Descripción
 
 Este proyecto está pensado para realizar una lista de tareas para una librería comunitaria utilizando la base de datos de MongoDB Atlas, para así poder asignar las mismas a los trabajadores, o involucrados en esta librería.
-Esta API rest esta ideada para trabajarla desde el framework Angular versión 16.1.6 <img src='image/Logo angular.png' alt='Logo Angular' width="120" height="60">
+Esta API rest esta ideada para trabajarla desde el framework Angular versión 16.1.6 <img src='image/Logo angular.png' alt='Logo Angular' width="60" height="60">
 
 ## Funcionalidades
 - Obtener y actualizar las tareas.
