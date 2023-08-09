@@ -8,7 +8,7 @@
 ## Descripción
 
 Este proyecto está pensado para realizar una lista de tareas para una librería comunitaria utilizando la base de datos de MongoDB Atlas, para así poder asignar las mismas a los trabajadores, o involucrados en esta librería.
-Esta API rest esta ideada para trabajarla desde el framework Angular versión 16.1.6 <img src='image/Logo angular.png' alt='Logo Angular' width="60" height="90">
+Esta API rest esta ideada para trabajarla desde el framework Angular versión 16.1.6 <img src='image/Logo angular.png' alt='Logo Angular' width="100" height="80">
 
 ## Funcionalidades
 - Obtener y actualizar las tareas.
