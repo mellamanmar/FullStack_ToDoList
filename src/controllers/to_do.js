@@ -1,4 +1,4 @@
-const ToDoSchema = require('../models/to_do')
+const ToDo = require('../models/to_do')
 
 const controllerToDO = {
   create: async (req,res) => {
@@ -8,7 +8,7 @@ const controllerToDO = {
       const deadline = req.body.deadline
       const status = req.body.status
       const update = req.body.update
-      await toDo.create ({
+      await ToDo.create ({
         task : task,
         task_responsable : task_responsable,
         deadline : deadline,
@@ -25,11 +25,11 @@ const controllerToDO = {
 
   get: async (req,res) => {
     try {
-      const task = await ToDoSchema.find({})
-      const task_responsable = await ToDoSchema.find({})
-      const deadline = await ToDoSchema.find({})
-      const status = await ToDoSchema.find({})
-      const update = await ToDoSchema.find({})
+      const task = await ToDo.find({})
+      const task_responsable = await ToDo.find({})
+      const deadline = await ToDo.find({})
+      const status = await ToDo.find({})
+      const update = await ToDo.find({})
 
       res.json(
         task,
@@ -46,11 +46,11 @@ const controllerToDO = {
   getById: async (req,res) => {
     try {
         const {id} = req.params
-        const task = await ToDoSchema.findById(id)
-        const task_responsable = await ToDoSchema.findById(id)
-        const deadline = await ToDoSchema.findById(id)
-        const status = await ToDoSchema.findById(id)
-        const update = await ToDoSchema.findById(id)
+        const task = await ToDo.findById(id)
+        const task_responsable = await ToDo.findById(id)
+        const deadline = await ToDo.findById(id)
+        const status = await ToDo.findById(id)
+        const update = await ToDo.findById(id)
         res.json(
           task,
           task_responsable,
@@ -71,7 +71,7 @@ update: async (req,res) =>{
       const deadline = req.body.deadline
       const status = req.body.status
       const update = req.body.update
-      await toDo.findByIdAndUpdate(id,{
+      await ToDo.findByIdAndUpdate(id,{
         task : task,
         task_responsable : task_responsable,
         deadline : deadline,
@@ -88,7 +88,7 @@ update: async (req,res) =>{
 delete: async (req,res)=>{
   try {
       const {id} = req.params
-      await toDo.findByIdAndDelete(id)
+      await ToDo.findByIdAndDelete(id)
       res.json({msg:'Deleted'})
   } catch (err) {
       console.error(err)
