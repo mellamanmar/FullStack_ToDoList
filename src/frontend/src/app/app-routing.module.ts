@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TaskComponent } from './component/task/task.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/todo', pathMatch: 'full'},
-  {path: 'todo', component: TaskComponent }
+  { path: '', redirectTo: 'todo', pathMatch: 'full' },
+  {path: 'todo', component: TaskComponent}
 ];
 
 @NgModule({

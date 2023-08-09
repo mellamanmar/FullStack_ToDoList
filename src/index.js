@@ -13,8 +13,6 @@ const port = 3000
 
 //middlewares
 app.set ('port', port)
-app.set ('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'client'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 

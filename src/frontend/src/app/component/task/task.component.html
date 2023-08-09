@@ -1,18 +1,24 @@
-<div class="row">
+<!-- <ul class="heroes">
+  <li *ngFor="let item of toDo">
+      <span class="badge">{{toDo.task}}</span>
+  </li>
+</ul> -->
+
+<!-- <div class="row">
   <div class="card">
     <div class="card-header">Add task
       <div class="card-body">
-        <form action="">
+        <form (submit)="addTask">
           <div class="form-group">
-            <input type="text" [(ngModel)]="newToDo.task" name="task" class="form-control" placeholder="Task here" required autofocus>
-            <input type="text" [(ngModel)]="newToDo.task_responsable" name="task_responsable" class="form-control" placeholder="Add a responsable">
-            <input type="date" [(ngModel)]="newToDo.deadline" name="deadline" class="form-control" placeholder="Define deadline">
-            <input type="text" [(ngModel)]="newToDo.status" name="status" class="form-control" placeholder="Task status">
-            <textarea type="textarea" [(ngModel)]="newToDo.update" name="update" class="form-control" placeholder="Update the task"></textarea>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <input type="text" name="task" [(ngModel)]="newToDo" class="form-control" placeholder="Task here" required autofocus>
+            <input type="text" name="task_responsable" [(ngModel)]="newToDo" class="form-control" placeholder="Add a responsable">
+            <input type="date" name="deadline" [(ngModel)]="newToDo" class="form-control" placeholder="Define deadline">
+            <input type="text" name="status" [(ngModel)]="newToDo" class="form-control" placeholder="Task status">
+            <textarea type="textarea" name="update" [(ngModel)]="newToDo" class="form-control" placeholder="Update the task"></textarea>
+            <button type="submit" (click)="addTask()" class="btn btn-primary btn-block">Add</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-</div>
+</div> -->

@@ -1,5 +1,7 @@
  import { Component, OnInit } from '@angular/core';
- import {TaskService} from '../../services/task.service'
+ import {TaskService} from '../../services/task.service';
+ import { Observable } from 'rxjs';
+//  import { ToDo } from '../../ToDo'
 
 @Component({
   selector: 'app-task',
@@ -8,25 +10,27 @@
 })
 export class TaskComponent implements OnInit {
 
-  newToDo = {
-    task: '',
-    task_responsable: '',
-    deadline: '',
-    status: '',
-    update: ''
-  }
+  toDo: any [] = []
 
-  constructor(private taskService : TaskService) {}
+  constructor(private taskService : TaskService) {  }
+
   ngOnInit(): void {
+    this.getTasks()
   }
 
-  addTask() {
-    this.taskService.addTask(this.newToDo)
-    .subscribe(
-      res => {
-        console.log(res)
-      },
-      err => console.log(err)
-    )
+  getTasks() {
+    this.taskService.getTasks()
+    .subscribe(toDo => {
+      console.log (this.toDo)
+      this.toDo = toDo
+    })
+
   }
+
+  // addTask(newToDo:ToDo): void {
+  //   this.taskService.addTask(newToDo)
+  //   .subscribe(newToDo => this.newToDo = newToDo)
+  //   }
+
+
 }
